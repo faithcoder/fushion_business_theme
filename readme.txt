@@ -1,5 +1,5 @@
 === Fusion Business Theme ===
-Contributors: wordpressdotorg
+Contributors: faithcoder
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
