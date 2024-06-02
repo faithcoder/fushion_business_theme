@@ -12,27 +12,27 @@ Kirki::add_panel( 'stack_panel', array(
     'description' => esc_html__( 'Description', 'stack' ),
 ) );
 
-// Bannar Section
-Kirki::add_section( 'bannar_section', array(
-    'title'          => esc_html__( 'Bannar Section', 'stack' ),
+// banner Section
+Kirki::add_section( 'banner_section', array(
+    'title'          => esc_html__( 'Banner Section', 'stack' ),
     'panel'          => 'stack_panel',
     'priority'       => 160,
 ) );
 
 Kirki::add_field( 'stack_config', [
 	'type'        => 'custom',
-	'settings'    => 'bannar_content_setting',
-	'section'     => 'bannar_section',
-	'default'         => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'Bannar Content', 'stack' ) . '</h3>',
+	'settings'    => 'banner_content_setting',
+	'section'     => 'banner_section',
+	'default'         => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'Banner Content', 'stack' ) . '</h3>',
 	'priority'    => 10,
 ] );
 
-// Bannar Heading
+// banner Heading
 Kirki::add_field( 'stack_config', [
 	'type'     => 'text',
-	'settings' => 'bannar_heading',
-	'label'    => esc_html__( 'Bannar Heading', 'stack' ),
-	'section'  => 'bannar_section',
+	'settings' => 'banner_heading',
+	'label'    => esc_html__( 'Banner Heading', 'stack' ),
+	'section'  => 'banner_section',
 	'default'  => esc_html__( 'We Discover, Design & Build Digital
     Presence of Businesses', 'stack' ),
 	'priority' => 10,
@@ -45,12 +45,12 @@ Kirki::add_field( 'stack_config', [
 	),
 ] );
 
-// Bannar Heading Typography
+// banner Heading Typography
 Kirki::add_field( 'stack_config', [
 	'type'        => 'typography',
-	'settings'    => 'bannar_heading_typo',
-	'label'       => esc_html__( 'Bannar Heading Typography', 'stack' ),
-	'section'     => 'bannar_section',
+	'settings'    => 'banner_heading_typo',
+	'label'       => esc_html__( 'Banner Heading Typography', 'stack' ),
+	'section'     => 'banner_section',
 	'default'     => [
 		'font-family'    => 'Titillium Web',
 		'variant'        => '700',
@@ -70,12 +70,12 @@ Kirki::add_field( 'stack_config', [
 	],
 ] );
 
-// Bannar Btn Text
+// banner Btn Text
 Kirki::add_field( 'stack_config', [
 	'type'     => 'text',
-	'settings' => 'bannar_btn_text',
-	'label'    => esc_html__( 'Bannar Button Text', 'stack' ),
-	'section'  => 'bannar_section',
+	'settings' => 'banner_btn_text',
+	'label'    => esc_html__( 'Banner Button Text', 'stack' ),
+	'section'  => 'banner_section',
 	'default'  => esc_html__( 'Explore', 'stack' ),
 	'priority' => 10,
     'transport' => 'postMessage',
@@ -87,40 +87,40 @@ Kirki::add_field( 'stack_config', [
     )
 ] );
 
-// Bannar Btn Link
+// banner Btn Link
 Kirki::add_field( 'stack_config', [
 	'type'     => 'link',
-	'settings' => 'bannar_btn_link',
-	'label'    => esc_html__( 'Bannar Button Link', 'stack' ),
-	'section'  => 'bannar_section',
+	'settings' => 'banner_btn_link',
+	'label'    => esc_html__( 'Banner Button Link', 'stack' ),
+	'section'  => 'banner_section',
 	'default'  => esc_html__( 'https://www.google.com', 'stack' ),
 	'priority' => 10,
 ] );
 
-// Bannar Image
+// banner Image
 Kirki::add_field( 'stack_config', [
 	'type'     => 'image',
-	'settings' => 'bannar_image',
-	'label'    => esc_html__( 'Bannar Image', 'stack' ),
-	'section'  => 'bannar_section',
+	'settings' => 'banner_image',
+	'label'    => esc_html__( 'Banner Image', 'stack' ),
+	'section'  => 'banner_section',
 	'default'  => '',
 ] );
 
-// Bannar Section
+// banner Section
 Kirki::add_field( 'stack_config', [
 	'type'        => 'custom',
-	'settings'    => 'bannar_section_setting',
-	'section'     => 'bannar_section',
-	'default'         => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'Bannar Section', 'stack' ) . '</h3>',
+	'settings'    => 'banner_section_setting',
+	'section'     => 'banner_section',
+	'default'         => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'banner Section', 'stack' ) . '</h3>',
 	'priority'    => 10,
 ] );
 
-// Bannar Section Image
+// banner Section Image
 Kirki::add_field( 'stack_config', [
 	'type'        => 'background',
-	'settings'    => 'bannar_section_image', 
-	'label'       => esc_html__( 'Bannar Section Background', 'kirki' ),
-	'section'     => 'bannar_section',
+	'settings'    => 'banner_section_image', 
+	'label'       => esc_html__( 'Banner Section Background', 'kirki' ),
+	'section'     => 'banner_section',
 	'default'     => [
 		'background-color'      => 'rgba(20,20,20,.8)',
 		'background-image'      => '',
@@ -174,7 +174,7 @@ Kirki::add_field( 'stack_config', [
 	'default'  => esc_html__( 'More About Us', 'stack' ),
 ] );
 
-// Bannar Btn Link
+// banner Btn Link
 Kirki::add_field( 'stack_config', [
 	'type'     => 'link',
 	'settings' => 'about_btn_link',

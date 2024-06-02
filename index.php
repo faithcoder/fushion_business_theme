@@ -17,13 +17,13 @@ else{
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <div class="contents text-center">
-                <h2 class="head-title wow fadeInUp"><?php echo esc_html(get_theme_mod('bannar_heading'));?></h2>
+                <h2 class="head-title wow fadeInUp"><?php echo esc_html(get_theme_mod('banner_heading'));?></h2>
                 <div class="header-button wow fadeInUp" data-wow-delay="0.3s">
-                  <a href="<?php echo esc_url(get_theme_mod('bannar_btn_link'));?>" class="btn btn-common"><?php echo esc_html(get_theme_mod('bannar_btn_text'));?></a>
+                  <a href="<?php echo esc_url(get_theme_mod('banner_btn_link'));?>" class="btn btn-common"><?php echo esc_html(get_theme_mod('banner_btn_text'));?></a>
                 </div>
               </div>
               <div class="img-thumb text-center wow fadeInUp" data-wow-delay="0.6s">
-                <img class="img-fluid" src="<?php echo esc_url(get_theme_mod('bannar_image'));?>" alt="">
+                <img class="img-fluid" src="<?php echo esc_url(get_theme_mod('banner_image'));?>" alt="">
               </div>
             </div>
           </div>
