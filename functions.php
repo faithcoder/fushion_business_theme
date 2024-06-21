@@ -1,7 +1,12 @@
 <?php
 
 // Kirki Customizer
-require_once(get_theme_file_path('/inc/stack-customizer.php'));
+if ( ! class_exists( 'Kirki' ) ) {
+    require_once get_template_directory() . '/required-plugins/kirki/kirki.php';
+}
+include_once(get_theme_file_path('/inc/stack-customizer.php'));
+include_once(get_theme_file_path('/inc/tgm/class-tgm-plugin-activation.php'));
+include_once(get_theme_file_path('/inc/tgm/active_plugins.php'));
 
 function stack_setup() {
 
