@@ -8,7 +8,7 @@ Kirki::add_config( 'stack_config', array(
 
 Kirki::add_panel( 'stack_panel', array(
     'priority'    => 10,
-    'title'       => esc_html__( 'Stack Options', 'stack' ),
+    'title'       => esc_html__( 'Fushion Stack Options', 'stack' ),
     'description' => esc_html__( 'Description', 'stack' ),
 ) );
 
