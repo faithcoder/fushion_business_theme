@@ -103,7 +103,7 @@ Kirki::add_field( 'stack_config', [
 	'settings' => 'banner_image',
 	'label'    => esc_html__( 'Banner Image', 'stack' ),
 	'section'  => 'banner_section',
-	'default'  => '',
+	'default'  => "get_template_directory_uri() . '/assets/img/hero-bg.png'",
 ] );
 
 // banner Section
@@ -111,7 +111,7 @@ Kirki::add_field( 'stack_config', [
 	'type'        => 'custom',
 	'settings'    => 'banner_section_setting',
 	'section'     => 'banner_section',
-	'default'         => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'banner Section', 'stack' ) . '</h3>',
+	'default'     => '<h3 style="padding:15px 10px; background:#fff; margin:0;">' . __( 'banner Section', 'stack' ) . '</h3>',
 	'priority'    => 10,
 ] );
 
@@ -122,7 +122,7 @@ Kirki::add_field( 'stack_config', [
 	'label'       => esc_html__( 'Banner Section Background', 'kirki' ),
 	'section'     => 'banner_section',
 	'default'     => [
-		'background-color'      => 'rgba(20,20,20,.8)',
+		'background-color'      => '',
 		'background-image'      => '',
 		'background-repeat'     => 'no-repeat',
 		'background-position'   => 'center center',
@@ -136,6 +136,70 @@ Kirki::add_field( 'stack_config', [
 		],
 	],
 ] );
+
+// Define the section
+Kirki::add_section( 'layout_section', [
+	'title'      => esc_html__( 'Layout Settings', 'stack' ),
+	'description'=> esc_html__( 'Adjust padding and margin settings.', 'stack' ),
+	'priority'   => 160,
+ ] );
+ 
+ // Hero/Banner Area Padding Control
+ Kirki::add_field( 'stack_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'padding',
+	'label'       => esc_html__( 'Padding', 'stack' ),
+	'section'     => 'banner_section',
+	'default'     => [
+		'padding-top'    => '150px',
+		'padding-right'  => '0px',
+		'padding-bottom' => '150px',
+		'padding-left'   => '0px',
+	],
+	'choices'     => [
+		'labels' => [
+			'padding-top'    => esc_html__( 'Top', 'stack' ),
+			'padding-right'  => esc_html__( 'Right', 'stack' ),
+			'padding-bottom' => esc_html__( 'Bottom', 'stack' ),
+			'padding-left'   => esc_html__( 'Left', 'stack' ),
+		],
+	],
+	'output' => [
+		[
+			'element' => '#hero-area', 
+			'property' => '',
+		],
+	],
+ ] );
+ 
+ // Hero/Banner Area Margin Control
+ Kirki::add_field( 'stack_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'margin',
+	'label'       => esc_html__( 'Margin', 'stack' ),
+	'section'     => 'banner_section',
+	'default'     => [
+		'margin-top'    => '0px',
+		'margin-right'  => '0px',
+		'margin-bottom' => '0px',
+		'margin-left'   => '0px',
+	],
+	'choices'     => [
+		'labels' => [
+			'margin-top'    => esc_html__( 'Top', 'stack' ),
+			'margin-right'  => esc_html__( 'Right', 'stack' ),
+			'margin-bottom' => esc_html__( 'Bottom', 'stack' ),
+			'margin-left'   => esc_html__( 'Left', 'stack' ),
+		],
+	],
+	'output' => [
+		[
+			'element' => '#hero-area', 
+			'property' => '',
+		],
+	],
+ ] );
+ 
 
 
 // About Section
@@ -231,6 +295,62 @@ Kirki::add_field( 'stack_config', [
 		'limit' => 3
 	],
 ] );
+
+// About Area Padding Control
+Kirki::add_field( 'stack_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'padding',
+	'label'       => esc_html__( 'Padding', 'stack' ),
+	'section'     => 'about_section',
+	'default'     => [
+		'padding-top'    => '200px',
+		'padding-right'  => '0',
+		'padding-bottom' => '200px',
+		'padding-left'   => '50px',
+	],
+	'choices'     => [
+		'labels' => [
+			'padding-top'    => esc_html__( 'Top', 'stack' ),
+			'padding-right'  => esc_html__( 'Right', 'stack' ),
+			'padding-bottom' => esc_html__( 'Bottom', 'stack' ),
+			'padding-left'   => esc_html__( 'Left', 'stack' ),
+		],
+	],
+	'output' => [
+		[
+			'element' => '.text-wrapper', 
+			'property' => '',
+		],
+	],
+ ] );
+ 
+ // About Area Margin Control
+ Kirki::add_field( 'stack_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'margin',
+	'label'       => esc_html__( 'Margin', 'stack' ),
+	'section'     => 'about_section',
+	'default'     => [
+		'margin-top'    => '0px',
+		'margin-right'  => '0px',
+		'margin-bottom' => '0px',
+		'margin-left'   => '0px',
+	],
+	'choices'     => [
+		'labels' => [
+			'margin-top'    => esc_html__( 'Top', 'stack' ),
+			'margin-right'  => esc_html__( 'Right', 'stack' ),
+			'margin-bottom' => esc_html__( 'Bottom', 'stack' ),
+			'margin-left'   => esc_html__( 'Left', 'stack' ),
+		],
+	],
+	'output' => [
+		[
+			'element' => '#feature', 
+			'property' => '',
+		],
+	],
+ ] );
 
 
 // Services Section
@@ -1101,3 +1221,4 @@ Kirki::add_field( 'stack_config', [
 	'section'  => 'footer_section',
 	'default'  => '',
 ] );
+
